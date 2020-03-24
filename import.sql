@@ -1,0 +1,1 @@
+load data infile '/Users/dctucker/Downloads/2020 electricity.csv' into table readings columns terminated by ',' enclosed by '"' lines terminated by '\n' ignore 1 lines (@meter_number, @datestr, @timestr, duration, value) set date=STR_TO_DATE(@datestr, '%m/%d/%Y'), time=str_to_date(@timestr, '%h:%i %p');
